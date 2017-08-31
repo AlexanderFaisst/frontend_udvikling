@@ -1,0 +1,38 @@
+body{
+    margin:1em;
+    color:#fff;
+    font-size:21px;
+    text-align: center;
+  }
+  
+  .container, .container-fluid, .row, .voorbeeld{
+    background:#03C49A;
+    border-radius:6px;
+  }
+  
+  .container, .container-fluid, .row{
+    padding-top:0.5em;  
+    padding-bottom:0.5em;
+  }
+  
+  .container::before{
+    content:"Container"
+  }
+  
+  .container-fluid::before{
+    content:"Container - Fluid"
+  }
+  
+  .row{
+    background:#00A897;
+    margin-bottom:1em;
+  }
+  
+  .row::before{
+    content:"Row";
+    padding-left:15px;
+  }
+  
+  .voorbeeld{
+    background:#047F91;
+  }

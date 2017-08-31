@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="equal_height_style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Document</title>
+    <script>
+        var equalColumns = function () {
+            var columns = document.getElementsByClassName("col");
+            var length = columns.length;
+            var height = 0;
+            for(var i = 0; i < length; i++) {
+                columns[i].style.height = "auto";
+            }
+            for(var i = 0; i < length; i++) {
+                if(columns[i].clientHeight > height) {
+                    height = columns[i].clientHeight;
+                }
+            }
+            for(var i = 0; i < length; i++) {
+                columns[i].style.height = height + "px";
+            }
+        }
+        equalColumns();
+        window.addEventListener("resize",equalColumns, true);
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div  class="col" class="col-xs-6"> 
+                <div class="voorbeeld">
+                        Lav en simpel Bootstrap side, hvor du har mindst 2 kolonner ved siden ad hinanden.
+                        Udover de sædvanlige col-md-* class'er, skal du også give dem classen "col".
+                        Sørg for, at deres højder ikke er ens. Bare indsæt tekst med varierende antal linjer.
+                        Test i browseren inden du bruger den udleverede javascript kode.<br/>
+                        Indtast nu den udleverede javascript kode og tjek, at den nu sørger for, at deres højder er ens.
+                        Husk at tjekke konsollen i browseren for fejl - Javascript kan jo aldrig få lov at vise fejl direkte på siden.
+                </div>
+            </div>
+            <div  class="col" class="col-xs-6">
+                <div class="voorbeeld">
+                        Du skal kunne fortælle, hvor i koden det ville være smartest, at placere den udleverede javascript kode (i toppen eller i bunden) og hvorfor?
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
