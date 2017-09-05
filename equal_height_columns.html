@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="equal_height_style.css">
+    <link rel="stylesheet" href="css/equal_height_style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <title>Document</title>
     <script>
         var equalColumns = function () {
-            var columns = document.getElementsByClassName("col");
+            console.log("hej");
+            var columns = document.getElementsByClassName("voorbeeld");
             var length = columns.length;
+            console.log("length =" + length);
             var height = 0;
             for(var i = 0; i < length; i++) {
                 columns[i].style.height = "auto";
@@ -19,10 +21,12 @@
             for(var i = 0; i < length; i++) {
                 if(columns[i].clientHeight > height) {
                     height = columns[i].clientHeight;
+                    console.log("height = " + height);
                 }
             }
             for(var i = 0; i < length; i++) {
                 columns[i].style.height = height + "px";
+                console.log(" columns[i].style.height = " + columns[i].style.height);
             }
         }
         equalColumns();
@@ -33,7 +37,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <div  class="col" class="col-xs-6"> 
+            <div class="col-xs-6 "> 
                 <div class="voorbeeld">
                         Lav en simpel Bootstrap side, hvor du har mindst 2 kolonner ved siden ad hinanden.
                         Udover de sædvanlige col-md-* class'er, skal du også give dem classen "col".
@@ -43,7 +47,7 @@
                         Husk at tjekke konsollen i browseren for fejl - Javascript kan jo aldrig få lov at vise fejl direkte på siden.
                 </div>
             </div>
-            <div  class="col" class="col-xs-6">
+            <div class="col-xs-6">
                 <div class="voorbeeld">
                         Du skal kunne fortælle, hvor i koden det ville være smartest, at placere den udleverede javascript kode (i toppen eller i bunden) og hvorfor?
                 </div>

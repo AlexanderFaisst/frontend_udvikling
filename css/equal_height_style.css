@@ -13,6 +13,7 @@ body{
   .container, .container-fluid, .row{
     padding-top:0.5em;  
     padding-bottom:0.5em;
+    margin: 0 auto;
   }
   
   .container::before{
@@ -36,3 +37,5 @@ body{
   .voorbeeld{
     background:#047F91;
   }
+
+  
