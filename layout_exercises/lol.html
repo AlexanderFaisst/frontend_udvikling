@@ -11,18 +11,30 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="black col-xs-12"></div>
-            <div class="red col-xs-1 col-xs-offset-4"></div>
-            <div class="red col-xs-1 col-xs-offset-2"></div>
-            <div class="black col-xs-12"></div>
-            <div class="black col-xs-12"></div>
-            <div class="red col-xs-1 col-xs-offset-3"></div>
-            <div class="red col-xs-4 col-xs-offset-0 col-sm-1 col-sm-offset-4"></div>
-            <div class="red col-xs-1 col-sm-4 col-xs-offset-0 col-sm-offset-4"></div>
+    <div class="container2">
+        <div class="row_cont">
+        <img/>
+
         </div>
     </div>
+    <script>
+        for (let j = 0; j < 8; j++) {
+            let row = document.createElement("DIV");
+            row.setAttribute("class", "row");
+            for (let i = 0; i < 12; i++) {
+                let myDiv = document.createElement("DIV");
+                myDiv.setAttribute("class", "col-xs-1");
+                myDiv.style.border = "2px solid rgba(0,0,0,1)";
+                myDiv.style.height = "30px";
+                myDiv.style.width = "30px";
+                row.style.width = "410px";
+                let arr = document.getElementsByClassName("row_cont");
+                arr[0].style.width="407px";
+                row.appendChild(myDiv);
+                arr[0].appendChild(row);
+            }
+        }
+    </script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
